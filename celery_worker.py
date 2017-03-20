@@ -1,4 +1,8 @@
 # coding=utf-8
+"""
+worker start:
+celery worker -A celery_worker.celery -l INFO
+"""
 from application.extensions.flask_celery import celery
 from application import create_app
 
