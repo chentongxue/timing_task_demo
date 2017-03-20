@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+<body>
+    <table border="1">
+        {% for item in result %}
+        <tr>
+            <td>{{ item.url }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.created_at }}</td>
+            <td>
+                <a href="{{ url_for('frontend.tasks_switch', task_id=item.task_id) }}">{{ '暂停' if item.status else '启动' }}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
