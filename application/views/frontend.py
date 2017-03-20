@@ -11,8 +11,8 @@ from application.extensions.database import database
 frontend_blueprint = Blueprint('frontend', __name__)
 
 
-@frontend_blueprint.route('/')
-def index():
+@frontend_blueprint.route('/test')
+def test():
     calc.delay(1, 2)
     return 'hello world'
 
